@@ -1,39 +1,6 @@
 @import "../../public/style/base.scss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-
-
-//fuentes
-$fuente-base: 'Poppins', sans-serif;
-
-//colores
-$color-nav: #152D54;
-$color-base: #0A1931;
-$blanco-opaco: #DDDDDD;
-$blanco: #fff;
-
-//weights
-$regular: 400;
-$semibold: 500;
-$bold: 600;
-$extrabold: 800;
-
-
-//Tamaños de fuentes
-$S: .7rem;
-$XS: 1rem;
-$M: 1.25rem;
-$XM: 1.5rem;
-$L: 1.75rem;
-$XL: 2rem;
-$XXL: 2.25rem;
-
-$header-height: 4rem;
 
 
 h1,

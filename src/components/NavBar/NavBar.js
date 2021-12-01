@@ -20,8 +20,8 @@ const NavBar = () => {
                 </div> 
                     <ul className={sideBar ? 'nav__ul active': 'nav__ul'} >
                         <li className="nav__ul-li">Inicio</li>
-                        <li className="nav__ul-li">Entradas</li>
-                        <li className="nav__ul-li">Oradores</li>
+                        <li className="nav__ul-li">Registro</li>
+                        <li className="nav__ul-li">Invitado</li>
                     </ul>
             </nav>
         </>
