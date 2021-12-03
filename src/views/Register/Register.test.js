@@ -17,18 +17,18 @@ describe('The input must be able to receive, by props, a Name, a Label, a Placeh
         )
     })
     test('should render input Name', () => {
-        component.getByLabelText(/Nombre/i)
+        component.getByText(/Nombre/i)
     })
     test('should render input last name', () => {
-        component.getByLabelText(/Apellido/i)
+        component.getByText(/Apellido/i)
     })
     test('should render input Phone', () => {
-        component.getByLabelText(/Telefono/i)
+        component.getByText(/Telefono/i)
     })
     test('should render input Mail', () => {
-        component.getByLabelText(/Mail/i)
+        component.getByText(/Mail/i)
     })
     test('should render input Church', () => {
-        component.getByLabelText(/Iglesia/i)
+        component.getByText(/Iglesia/i)
     })
 })

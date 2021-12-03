@@ -7,6 +7,13 @@ import NavBar from './components/NavBar/NavBar';
 import {collection, getDocs} from 'firebase/firestore';
 import db from './config/firebase'
 import {ButtonPrimary} from './components/Buttons/Buttons'
+import Register from './views/Register/Register';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 const App = () => {
@@ -30,10 +37,11 @@ const App = () => {
   return (
     <IntlProvider locale={currentLocale} messages={messages}>
       <div className="App">
-        <NavBar />
-          <ButtonPrimary>
-            Hola
-          </ButtonPrimary>
+          <Router>
+            <Routes>
+              <Route path="/Registro" element={<Register />}/>
+            </Routes>
+          </Router>
       </div>
     </IntlProvider>
   );
