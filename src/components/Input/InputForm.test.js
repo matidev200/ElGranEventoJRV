@@ -5,13 +5,13 @@ import { IntlProvider } from "react-intl";
 import InputForm from "./InputForm";
 import { messages as allMessages } from "../../messages/messages";
 
-const [value, setValue] = useState({})
-const handleChange = e => {
-    e.preventDefault()
-    setValue({ ...value, [e.target.name]: e.target.value })
-}
 
 describe('The input must be able to receive, by props, a Name, a Label, a Placeholder and an onChange.', () => {
+    const [value, setValue] = useState({})
+    const handleChange = e => {
+        e.preventDefault()
+        setValue({ ...value, [e.target.name]: e.target.value })
+    }
     const currentLocale = "es";
     const messages = allMessages[currentLocale];
     let component;

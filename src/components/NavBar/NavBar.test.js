@@ -17,7 +17,7 @@ describe('The navbar must contain the links to the views.', () => {
         )
     })
     test('should render link to Home', () => {
-        component.getByText(/Inicio/i)
+        component.getByText(/HOME/i)
     })
     test('should render link to Guest', () => {
         component.getByText(/Invitado/i)
