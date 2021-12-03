@@ -15,6 +15,7 @@ const NavBar = () => {
         setSideBar(!sideBar)
     }
     const underlineHandle = (name) => setUnderline({ [name]: "is-active" })
+
     return (
         <header className="nav-position">
             <nav className={sideBar ? "nav nav-change-color" : "nav"}>

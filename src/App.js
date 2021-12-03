@@ -3,34 +3,31 @@ import React, { useEffect } from 'react';
 import '../src/public/style/base.scss';
 import { IntlProvider } from "react-intl";
 import { messages as allMessages } from './messages/messages';
-import NavBar from './components/NavBar/NavBar';
-import Home from "./views/Home/Home"
-import { collection, getDocs } from 'firebase/firestore';
-import db from './config/firebase'
+import Register from './views/Register/Register';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import {obtenerDatos} from './service/firebaseService'
 
 const App = () => {
   const currentLocale = "es";
   const messages = allMessages[currentLocale];
 
   useEffect(() => {
-    const obtenerDatos = async () => {
-      const querySnapshot = await getDocs(collection(db, 'usuarios'))
-      const docs = [];
-      querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id })
-      })
-      console.log(docs)
-    }
-
-
     obtenerDatos()
   }, [])
 
   return (
     <IntlProvider locale={currentLocale} messages={messages}>
       <div className="App">
-        <NavBar />
-        <Home />
+
+          <Router>
+            <Routes>
+              <Route path="/Registro" element={<Register />}/>
+            </Routes>
+          </Router>
       </div>
     </IntlProvider>
   );
