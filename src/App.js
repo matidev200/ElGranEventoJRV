@@ -6,6 +6,8 @@ import { messages as allMessages } from './messages/messages';
 import NavBar from './components/NavBar/NavBar';
 import {collection, getDocs} from 'firebase/firestore';
 import db from './config/firebase'
+import {ButtonPrimary} from './components/Buttons/Buttons'
+
 
 const App = () => {
   const currentLocale = "es";
@@ -18,7 +20,7 @@ const App = () => {
       querySnapshot.forEach((doc) => {
         docs.push({...doc.data(), id: doc.id})
       })
-      console.log(docs)
+     
     }
    
 
@@ -29,6 +31,9 @@ const App = () => {
     <IntlProvider locale={currentLocale} messages={messages}>
       <div className="App">
         <NavBar />
+          <ButtonPrimary>
+            Hola
+          </ButtonPrimary>
       </div>
     </IntlProvider>
   );
