@@ -18,10 +18,11 @@ const App = () => {
   useEffect(() => {
     obtenerDatos()
   }, [])
-  
+
   return (
     <IntlProvider locale={currentLocale} messages={messages}>
       <div className="App">
+
           <Router>
             <Routes>
               <Route path="/Registro" element={<Register />}/>

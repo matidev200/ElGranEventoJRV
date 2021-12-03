@@ -7,6 +7,7 @@ import { messages as allMessages } from "../../messages/messages";
 
 
 
+
 describe('The input must be able to receive, by props, a Name, a Label, a Placeholder and an onChange.', () => {
     
     

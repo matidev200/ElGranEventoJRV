@@ -18,22 +18,27 @@ code {
     outline: none;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+@font-face {
+    font-family: "Poppins";
+    src: url("../../assets/fonts/Poppins-Regular.ttf");
+    font-weight: regular;
+    font-style: regular;
+}
 
 //fuentes
-$fuente-base: 'Poppins', sans-serif;
+$fuente-base: "Poppins";
 
 //colores
-$color-nav: #152D54;
-$color-base: #0A1931;
-$blanco-opaco: #DDDDDD;
+$body: #212121;
+$color-nav: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6474964985994398) 100%);;
+$color-base: #1d1d1d;
+$blanco-opaco: #dddddd;
 $blanco: #fff;
 
 //weights
@@ -42,9 +47,8 @@ $semibold: 500;
 $bold: 600;
 $extrabold: 800;
 
-
 //Tamaños de fuentes
-$S: .7rem;
+$S: 0.7rem;
 $XS: 1rem;
 $M: 1.25rem;
 $XM: 1.5rem;
@@ -53,3 +57,24 @@ $XL: 2rem;
 $XXL: 2.25rem;
 
 $header-height: 4rem;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+b,
+i {
+    color: $blanco;
+    font-weight: $semibold;
+}
+body {
+    background: $body;
+}
+
+.font18 {
+    font-family: $fuente-base;
+    font-size: 16px;
+}
