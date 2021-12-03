@@ -2,6 +2,7 @@ import React from 'react'
 import './Register.scss'
 import InputForm from '../../components/Input/InputForm'
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
+import {postData} from '../../service/firebaseService'
 
 const Register = () => {
     return (
@@ -38,7 +39,7 @@ const Register = () => {
             type="text"
             />
 
-            <ButtonPrimary>
+            <ButtonPrimary onClick={postData}>
                 Reservar Entrada
             </ButtonPrimary>
             

@@ -3,34 +3,19 @@ import React, { useEffect } from 'react';
 import '../src/public/style/base.scss';
 import { IntlProvider } from "react-intl";
 import { messages as allMessages } from './messages/messages';
-import NavBar from './components/NavBar/NavBar';
-import {collection, getDocs} from 'firebase/firestore';
-import db from './config/firebase'
-import {ButtonPrimary} from './components/Buttons/Buttons'
 import Register from './views/Register/Register';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
-
+import {obtenerDatos} from './service/firebaseService'
 
 const App = () => {
   const currentLocale = "es";
   const messages = allMessages[currentLocale];
 
   useEffect(() => {
-    const obtenerDatos = async() => {
-      const querySnapshot = await getDocs(collection(db, 'usuarios'))
-      const docs = [];
-      querySnapshot.forEach((doc) => {
-        docs.push({...doc.data(), id: doc.id})
-      })
-     
-    }
-   
-
     obtenerDatos()
   }, [])
   

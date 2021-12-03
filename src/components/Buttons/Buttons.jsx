@@ -1,11 +1,11 @@
 import React from "react"
 import "./Buttons.scss"
 
-export const ButtonPrimary = ({children}) => {
+export const ButtonPrimary = ({children, onClick}) => {
 
     return (
         <>
-            <button>{children}</button>
+            <button onClick={onClick}>{children}</button>
         </>
     )
 }
