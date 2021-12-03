@@ -10,7 +10,7 @@ const NavBar = () => {
     const showSideBar = () => {
         setSideBar(!sideBar)
     }
-
+ 
     return (
         <>
             <nav className={sideBar ? "nav nav-change-color" : "nav"}>

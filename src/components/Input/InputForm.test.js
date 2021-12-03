@@ -5,13 +5,11 @@ import { IntlProvider } from "react-intl";
 import InputForm from "./InputForm";
 import { messages as allMessages } from "../../messages/messages";
 
-const [value, setValue] = useState({})
-const handleChange = e => {
-    e.preventDefault()
-    setValue({ ...value, [e.target.name]: e.target.value })
-}
+
 
 describe('The input must be able to receive, by props, a Name, a Label, a Placeholder and an onChange.', () => {
+    
+    
     const currentLocale = "es";
     const messages = allMessages[currentLocale];
     let component;
@@ -22,7 +20,7 @@ describe('The input must be able to receive, by props, a Name, a Label, a Placeh
                     placeholder="Nombre generico"
                     label="Nombre"
                     name="name"
-                    onChange={handleChange}
+                    type="type"
                 />
             </IntlProvider>
         )
@@ -32,10 +30,10 @@ describe('The input must be able to receive, by props, a Name, a Label, a Placeh
         component.getByPlaceholderText(/Nombre generico/i)
     })
     test('should render a Label', () => {
-        component.getByLabelText(/Nombre/i)
+        component.getByText(/Nombre/i)
     })
     test('should render a name', () => {
-        const input = component.getByLabelText(/Nombre/i)
+        const input = component.getByText(/Nombre/i)
         fireEvent.change(input, { target: { name: 'Facu' } })
         expect(input.value).toBe('Facu')
     })
