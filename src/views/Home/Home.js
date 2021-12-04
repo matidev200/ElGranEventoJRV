@@ -11,6 +11,7 @@ const Home = () => {
         <div className="home">
             <header className="img-header-home">
                 <img
+                    alt="bg-will"
                     src={HomeBackGround}
                 />
                 <div className="title-img-home">
@@ -19,7 +20,10 @@ const Home = () => {
                     <img src={Logo} alt="logo" />
                 </div>
                 <div className="ttl-logo-home">
-                    <img src={ttl} />
+                    <img 
+                    src={ttl} 
+                        alt="icon-ttl"
+                    />
                 </div>
             </header>
             <section className="content-home">

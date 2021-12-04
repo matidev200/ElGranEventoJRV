@@ -16,12 +16,14 @@
         background: $color-nav;
     }
 }
+.bg-change {
+    background: $color-nav;
+}
 .nav-position {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2;
-
 }
 .nav-change-color {
     background-color: $color-nav;
@@ -98,11 +100,11 @@
     display: none;
     height: 100vh;
     right: -100%;
-    background-color:$color-base;
+    background-color: $color-base;
 
-    transition: all .8s;
+    transition: all 0.8s;
     @media (min-width: 1100px) {
-        display:flex;
+        display: flex;
         position: relative;
         padding-left: 0rem;
         max-width: 500px;
@@ -113,7 +115,7 @@
         background-color: transparent;
         align-items: center;
         justify-content: space-around;
-        
+
         .is-active::after {
             content: "";
             position: absolute;
@@ -132,14 +134,17 @@
         cursor: pointer;
         color: $blanco-opaco;
         height: fit-content;
+        & a {
+            text-decoration: none;
+        }
     }
 }
 
-.active{
+.active {
     right: 0;
     display: block;
     animation-name: navTransition;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,15 +154,14 @@
     }
 }
 
-@keyframes navTransition{
-    0%{
+@keyframes navTransition {
+    0% {
         right: -100%;
     }
-    100%{
+    100% {
         right: 0;
     }
 }
-
 
 .logo-nav {
     position: absolute;
