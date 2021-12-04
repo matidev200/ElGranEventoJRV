@@ -2,13 +2,18 @@
 
 
 .footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
     min-height: 380px;
     padding: 2rem;
     background-color: $color-footer;
     flex-direction: row;
     flex-wrap:wrap;
+    box-shadow: 0px -6px 25px 0px #0E0E0E4A;
     & > ul {
         padding: 1rem;
     }

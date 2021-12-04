@@ -5,6 +5,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
+    min-height: 100vh;
 }
 
 code {
@@ -36,11 +37,15 @@ $fuente-base: "Poppins";
 
 //colores
 $body: #212121;
-$color-nav: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(12,12,12,1) 100%);
+$color-nav: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(12, 12, 12, 0.438) 100%);
 $color-base: #0C0C0C;
-$blanco-opaco: #CCC;
+$blanco-opaco: rgba(221, 221, 221, 1);
 $blanco: #fff;
 $color-footer: #181818;
+$orange:#E17C5B;
+
+//media
+$medium: 1100px;
 
 //weights
 $thin: 200;

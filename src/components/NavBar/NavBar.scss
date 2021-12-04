@@ -3,7 +3,7 @@
 .nav {
     font-family: $fuente-base;
     top: 0;
-    height: 95px;
+    height: 80px;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -17,8 +17,10 @@
     }
 }
 .nav-position {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
+    z-index: 2;
 }
 .nav-change-color {
     background-color: $color-nav;
