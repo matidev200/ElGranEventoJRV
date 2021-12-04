@@ -9,3 +9,11 @@
 }
 
 
+.btn-register {
+    margin-top: 2rem;
+    width: 80%;
+    & button {
+        width: 100%;
+
+    }
+}

@@ -107,7 +107,7 @@ const Register = () => {
             onChange={handleChange}
             err={err.iglesia}
             />
-            <ButtonPrimary onClick={() => sendData(value)}>
+            <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                 Reservá tu entrada
             </ButtonPrimary>    
         </div>
