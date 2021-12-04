@@ -41,6 +41,7 @@ $color-base: #0C0C0C;
 $blanco-opaco: #CCC;
 $blanco: #fff;
 $color-footer: #181818;
+$color-naranja: #E17C5B;
 
 //weights
 $thin: 200;
@@ -97,3 +98,7 @@ body {
 //     font-family: $fuente-base;
 //     font-size: 18px;
 // }
+
+.relleno{
+    height: 95px;
+}

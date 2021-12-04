@@ -62,7 +62,8 @@ const Register = () => {
     }
 
     return (
-        <>  
+        <div className="form-container">  
+            <div className="relleno"></div>
             <InputForm
             label="Nombre" 
             placeholder="Nombre"
@@ -72,6 +73,7 @@ const Register = () => {
             err={err.nombre}
             />
             <InputForm 
+           
             label="Apellido"
             placeholder="Apellido"
             name="apellido"
@@ -80,6 +82,7 @@ const Register = () => {
             err={err.apellido}
             />
             <InputForm 
+            
             label="Telefono"
             placeholder="Telefono"
             name="telefono"
@@ -88,6 +91,7 @@ const Register = () => {
             err={err.telefono}
             />
             <InputForm
+            
             label="Mail" 
             placeholder="Mail"
             name="mail"
@@ -104,9 +108,9 @@ const Register = () => {
             err={err.iglesia}
             />
             <ButtonPrimary onClick={() => sendData(value)}>
-                Reservar Entrada
+                Reservá tu entrada
             </ButtonPrimary>    
-        </>
+        </div>
     )
 }
 

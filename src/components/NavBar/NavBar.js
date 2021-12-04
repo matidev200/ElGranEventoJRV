@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Logo from "../../assets/Logo.svg"
 import './NavBar.scss'
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const NavBar = () => {
     const [sideBar, setSideBar] = useState(false)

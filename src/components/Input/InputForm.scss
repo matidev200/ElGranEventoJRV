@@ -1,11 +1,33 @@
 @import "../../public/style/base.scss";
 
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    width: 90%;
+}
+
+.input-label{
+    color: $blanco;
+    font-family: $fuente-base;
+    font-weight: $light;
+    font-size: 14px;
+}
+
+.input{
+    padding: 10px 
+}
+
+.input::placeholder{
+    font-family: $fuente-base;
+}
 .error{
     border: 1px solid #c00;
-
+    padding: 10px;
     &::placeholder{
-        color: #c00;
-        font-size: 9px;
+        color: $color-naranja;
         font-family: $fuente-base;
     }
 }

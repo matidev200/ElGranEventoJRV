@@ -31,7 +31,7 @@ const App = () => {
             <Route exact path="/invitado" component={Invitados} />
           </Switch>
        
-        <Footer /> 
+        {/* <Footer />  */}
         </IntlProvider>
       </Router>
    

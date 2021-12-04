@@ -1,0 +1,11 @@
+@import "../../public/style/base.scss";
+
+.button{
+    width: 80%;
+    height: 40px;
+    background-color: $color-naranja;
+    border: none;
+    font-family: $fuente-base;
+    color: $blanco;
+    font-weight: $thin;
+}
