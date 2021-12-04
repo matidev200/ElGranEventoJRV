@@ -1,0 +1,11 @@
+@import "../../public/style/base.scss";
+
+.error{
+    border: 1px solid #c00;
+
+    &::placeholder{
+        color: #c00;
+        font-size: 9px;
+        font-family: $fuente-base;
+    }
+}

@@ -12,23 +12,27 @@ export const obtenerDatos = async() => {
 
 }
 
-export const postData = async() => {
+export const postData = async(data) => {
     
-    if(docs.length < 200){
+    if(docs.length < 5){
         console.log('Entrada reservada')
         const docRef = await addDoc(collection(db, 'usuarios'), {
-            nombre: "Prueba",
-            apellido: "Prueba",
-            edad: 32
+            nombre: data.nombre,
+            apellido: data.apellido,
+            mail: data.mail,
+            iglesia: data.iglesia,
+            telefono: data.telefono
         });
         console.log(docRef)
     } else {
 
         console.log('Tu entrada va a estar pendiente ya que se agotaron')
         await addDoc(collection(db, 'pendientes'),{
-            nombre: "Prueba",
-            apellido: "Prueba",
-            edad: 32
+            nombre: data.nombre,
+            apellido: data.apellido,
+            mail: data.mail,
+            iglesia: data.iglesia,
+            telefono: data.telefono
         })
     }        
 }
