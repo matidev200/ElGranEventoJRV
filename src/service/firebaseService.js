@@ -9,17 +9,13 @@ export const obtenerDatos = async() => {
     querySnapshot.forEach((doc) => {
       docs.push({...doc.data(), id: doc.id})
     })
-    // console.log(docs)
-
-    if(docs.length < 200){
-        
-    }
 
 }
 
 export const postData = async() => {
     
-    if(docs.length < 20){
+    if(docs.length < 200){
+        console.log('Entrada reservada')
         const docRef = await addDoc(collection(db, 'usuarios'), {
             nombre: "Prueba",
             apellido: "Prueba",
