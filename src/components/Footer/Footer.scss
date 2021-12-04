@@ -3,20 +3,19 @@
 
 .footer{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 80vh;
+    justify-content: flex-start;
+    min-height: 380px;
+    padding: 2rem;
     background-color: $color-footer;
-
+    flex-direction: row;
+    flex-wrap:wrap;
+    & > ul {
+        padding: 1rem;
+    }
+    @media  screen and (min-width: 521px) {
+        justify-content: space-around;
+    }
 }
-
-.footer-row{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
  
 .footer__ul{
     display: flex;
@@ -52,13 +51,4 @@
     font-size: 10px;
 }
 
-@media screen and (min-width: 1024px) {
-    .footer{
-        flex-direction: row;
-    }
 
-    .footer-row{
-        width: 50%;
-        margin-top: 100px;
-    }
-}
