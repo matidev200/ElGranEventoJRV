@@ -43,6 +43,7 @@ $blanco-opaco: rgba(221, 221, 221, 1);
 $blanco: #fff;
 $color-footer: #181818;
 $orange:#E17C5B;
+$color-register: #424242;
 
 //media
 $medium: 1100px;
@@ -79,7 +80,13 @@ li,
 small {
     color: $blanco;
     font-family: $fuente-base;
+    text-decoration: none;
 }
+
+ul{
+    list-style: none;
+}
+
 body {
     background: $body;
 }
@@ -104,5 +111,5 @@ body {
 // }
 
 .relleno{
-    height: 95px;
+    height: 80px;
 }
