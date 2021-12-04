@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Logo from "../../assets/Logo.svg"
 import './NavBar.scss'
-import {Link, BrowserRouter as Router} from 'react-router-dom';
-
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 const NavBar = () => {
     const [sideBar, setSideBar] = useState(false)
@@ -16,7 +15,11 @@ const NavBar = () => {
     const showSideBar = () => {
         setSideBar(!sideBar)
     }
-    const underlineHandle = (name) => setUnderline({ [name]: "is-active" })
+    const underlineHandle = (name) =>{ 
+        setUnderline({ [name]: "is-active" })
+        setSideBar(false)
+    
+    }
 
     return (
         <header className="nav-position">
@@ -29,8 +32,9 @@ const NavBar = () => {
                     <div className="menu-btn__burger"></div>
                 </div>
                 <ul className={"font18 " + (sideBar ? 'nav__ul active' : 'nav__ul')} >
-                    <Router>
-                    <li
+                    
+                  
+                   <li
                         onClick={() => underlineHandle("home")}
                         className={underline?.home}
                     ><Link to="/">HOME</Link></li>
@@ -42,7 +46,8 @@ const NavBar = () => {
                         onClick={() => underlineHandle("inv")}
                         className={underline?.inv}
                     ><Link to="/invitado">INVITADO</Link></li>
-                    </Router>
+                    
+                  
                 </ul>
             </nav>
         </header>
