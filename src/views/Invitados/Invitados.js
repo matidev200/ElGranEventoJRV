@@ -1,9 +1,10 @@
 import React from 'react'
-import './Oradores.scss'
+import './Invitados.scss'
 
 const Oradores = () => {
     return (
         <>
+        <h1>INVITADOS</h1>
         </>
     )
 }

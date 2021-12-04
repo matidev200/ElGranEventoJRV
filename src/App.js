@@ -6,9 +6,10 @@ import NavBar from './components/NavBar/NavBar';
 import { messages as allMessages } from './messages/messages';
 import Home from "./views/Home/Home"
 import Register from './views/Register/Register';
-import {BrowserRouter as Router,Routes,Route,} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
 import { obtenerDatos } from './service/firebaseService';
 import Footer from './components/Footer/Footer'
+import Invitados from './views/Invitados/Invitados'
 
 const App = () => {
   const currentLocale = "es";
@@ -19,18 +20,21 @@ const App = () => {
   }, [])
 
   return (
-    <IntlProvider locale={currentLocale} messages={messages}>
-      <div className="App">
+    
+      <Router className="App">
+        <IntlProvider locale={currentLocale} messages={messages}>
         <NavBar />
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Registro" element={<Register />} />
-          </Routes>
-        </Router>
+       
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/registro" component={Register} />
+            <Route exact path="/invitado" component={Invitados} />
+          </Switch>
+       
         <Footer /> 
-      </div>
-    </IntlProvider>
+        </IntlProvider>
+      </Router>
+   
   );
 }
 
