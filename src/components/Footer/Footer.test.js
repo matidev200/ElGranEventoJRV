@@ -20,9 +20,9 @@ describe('Should display the minimum data of an Footer', () => {
     test('should render an address', () => {
         component.getByText(/Dirección/i)
     })
-    test('should render a phone', () => {
-        component.getByText(/Teléfono/i)
-    })
+    // test('should render a phone', () => {
+    //     component.getByText(/Teléfono/i)
+    // })
     test('should render a contact', () => {
         component.getByText(/Contacto/i)
     })
