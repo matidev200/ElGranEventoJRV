@@ -1,1 +1,63 @@
 @import "../../public/style/base.scss";
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+    background-color: $color-footer;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+ 
+.footer__ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 12px;
+    list-style:none;
+
+    & > li{
+        font-size: 14px;
+        font-weight: $light;
+        color: $blanco-opaco;
+    }
+
+    & a{
+        font-size: 14px;
+        font-weight: $light;
+        color: $blanco-opaco;
+        text-decoration:none;
+    }
+
+    & > .footer__ul-title{
+        color: $blanco;
+        font-weight: $regular;
+        font-size: 18px;
+    }
+    
+}
+
+
+
+.copyright {
+    font-size: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer{
+        flex-direction: row;
+    }
+
+    .footer-row{
+        width: 50%;
+        margin-top: 100px;
+    }
+}

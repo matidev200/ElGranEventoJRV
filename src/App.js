@@ -6,12 +6,9 @@ import NavBar from './components/NavBar/NavBar';
 import { messages as allMessages } from './messages/messages';
 import Home from "./views/Home/Home"
 import Register from './views/Register/Register';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import { obtenerDatos } from './service/firebaseService'
+import {BrowserRouter as Router,Routes,Route,} from "react-router-dom";
+import { obtenerDatos } from './service/firebaseService';
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   const currentLocale = "es";
@@ -31,6 +28,7 @@ const App = () => {
             <Route path="/Registro" element={<Register />} />
           </Routes>
         </Router>
+        <Footer /> 
       </div>
     </IntlProvider>
   );

@@ -38,10 +38,13 @@ $fuente-base: "Poppins";
 $body: #212121;
 $color-nav: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(12,12,12,1) 100%);
 $color-base: #0C0C0C;
-$blanco-opaco: #dddddd;
+$blanco-opaco: #CCC;
 $blanco: #fff;
+$color-footer: #181818;
 
 //weights
+$thin: 200;
+$light: 300;
 $regular: 400;
 $semibold: 500;
 $bold: 600;
@@ -66,15 +69,31 @@ h5,
 p,
 a,
 b,
-i {
+i,
+li,
+small {
     color: $blanco;
-    font-weight: $semibold;
+    font-family: $fuente-base;
 }
 body {
     background: $body;
 }
 
-.font18 {
-    font-family: $fuente-base;
-    font-size: 16px;
-}
+// .font12{
+//     font-family: $fuente-base;
+//     font-size: 12px; 
+// }
+
+// .font14{
+//     font-family: $fuente-base;
+//     font-size: 14px;
+// }
+
+// .font16 {
+//     font-family: $fuente-base;
+//     font-size: 16px;
+// }
+// .font18 {
+//     font-family: $fuente-base;
+//     font-size: 18px;
+// }
