@@ -1,11 +1,61 @@
 @import "../../public/style/base.scss";
 
 
+.registro-titulo{
+    font-weight: $light;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    position: absolute;
+    z-index: 1;
+}
+
+
+.imagen-subpagina{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: relative;
+    overflow: hidden;
+    object-fit: contain;
+    height: 170px;
+    & > img {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        object-fit: cover;
+    }
+}
+
+.register-info {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    & > img {
+        width: 200px;
+      
+    }
+
+    & > p {
+     
+        text-align: center;
+        font-weight: $thin;
+        width: 260px;
+        font-size: 14px;
+    }
+}
+
 .form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1rem;
+    background-color:$color-register;
+    padding-bottom: 5rem;
 }
 
 
@@ -17,3 +67,33 @@
 
     }
 }
+
+.maps-container{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+
+    & > .maps{
+        background-color: $blanco;
+        height: 200px;
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    & > ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        & > li {
+            color: $blanco-opaco;
+        }
+    }
+    
+}
+
+
+
+
