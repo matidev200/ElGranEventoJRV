@@ -1,32 +1,16 @@
 @import "../../public/style/base.scss";
 
 
-.registro-titulo{
+
+.register-description{
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
     font-weight: $light;
-    text-transform: uppercase;
-    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    position: absolute;
-    z-index: 1;
 }
 
-
-.imagen-subpagina{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    position: relative;
-    overflow: hidden;
-    object-fit: contain;
-    height: 170px;
-    & > img {
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        right: 0;
-        object-fit: cover;
-    }
+.register-logo{
+        width: 200px;
 }
 
 .register-info {
@@ -34,20 +18,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 350px;
-    & > img {
-        width: 200px;
-      
+    height: 370px;
+    
+    @media screen and (min-width: 670px) {
+           & > .register-description {
+               font-size: 20px;
+           }
+
+          
+        
     }
 
-    & > p {
+    @media screen and (min-width: 768px) {
+        height: 470px;
+        & > .register-description {
+            width: 60%;
+        }
+
+        & > .register-logo {
+               width: 250px;
+        }
      
-        text-align: center;
-        font-weight: $thin;
-        width: 260px;
-        font-size: 14px;
+ }
+    @media screen and (min-width: 1024px) {
+        height: 570px;
+        
+
+        & > .register-logo {
+            width: 500px;
+        }
+    
     }
+   
 }
+
+
 
 .form-container{
     display: flex;
@@ -56,6 +61,10 @@
     row-gap: 1rem;
     background-color:$color-register;
     padding-bottom: 5rem;
+
+    @media screen and (min-width: 768px){
+        
+    }
 }
 
 

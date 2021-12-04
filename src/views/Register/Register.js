@@ -5,6 +5,8 @@ import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import {postData} from '../../service/firebaseService'
 import fondo_subpaginas from '../../assets/fondo_subpaginas.jpg'
 import Logo from '../../assets/Logo.svg'
+import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
+import { FormattedMessage } from "react-intl";
 
 const Register = () => {
     const [err, setErr] = useState({
@@ -67,14 +69,11 @@ const Register = () => {
         <>
         <div className="relleno"></div>
         
-        <div className="imagen-subpagina">
-             <h1 className="registro-titulo">Registro</h1>
-            <img src={fondo_subpaginas} alt="fondo-subpagina" />
-        </div>
+        <ImagenSubPagina>Registro</ImagenSubPagina>
 
         <div className="register-info">
-            <img src={Logo} alt="logo"/>
-            <p>Queremos que todos puedan disfrutar este tiempo con nosotros, por eso la entrada es libre y gratuita. Para poder obtenerla solo debes llenar el siguiente formulario y descargar el código QR. Te recordamos que la iglesia tiene capacidad límitada, por lo que te recomendamos sacar tu entrada lo antes posible para asegurarte tu lugar.</p>
+            <img src={Logo} alt="logo" className="register-logo"/>
+            <FormattedMessage id="Register.descripcion">{(message) => <p className="register-description">{message}</p>}</FormattedMessage>
         </div>
 
         <div className="form-container">  

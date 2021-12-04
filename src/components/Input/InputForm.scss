@@ -7,6 +7,22 @@
     flex-direction: column;
     row-gap: .5rem;
     width: 90%;
+
+    @media screen and (min-width: 768px) {
+        .input-label{
+            font-size: 18px;
+        } 
+
+        .input {
+            height: 45px;
+        }
+
+        .input::placeholder {
+            font-size: 18px;
+        }
+    }
+
+   
 }
 
 .input-label{
