@@ -1,0 +1,12 @@
+@import "../../public/style/base.scss";
+
+.btnPrimary {
+    & > button {
+        color: $blanco-opaco;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid $blanco-opaco;
+        border-radius: 2px;
+        background: $orange;
+    }
+}
