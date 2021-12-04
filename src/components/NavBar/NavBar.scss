@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    filter: drop-shadow(0px 6px 10px rgba(10, 10, 10, 0.25));
     @media (min-width: 1100px) {
         justify-content: flex-start;
     }
@@ -133,7 +134,7 @@
 
 .logo-nav {
     position: absolute;
-    width: 337px;
+    width: 230px;
     height: 190px;
     left: -12px;
     top: -48px;
