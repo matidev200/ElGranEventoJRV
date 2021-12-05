@@ -2,6 +2,8 @@
 
 
 
+
+
 .register-description{
     font-size: 14px;
     text-align: center;
@@ -67,41 +69,89 @@
     }
 }
 
+.input-row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 90%;
+    @media screen and (min-width: 1024px) {
+       flex-direction: row;
+       column-gap: 1rem;
+       width: 50%;
+    } 
+}
+
 
 .btn-register {
+    display: flex;
+    justify-content: center;
     margin-top: 2rem;
     width: 80%;
     & button {
-        width: 100%;
 
+        
+        @media screen and (min-width: 768px){
+          font-size: 16px;
+          width: 40%;
+        }
     }
-}
+    @media screen and (min-width: 1024px){
+        font-size: 18px;
+      }
+  }
 
-.maps-container{
+.maps-section{
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 3rem;
+} 
 
-    & > .maps{
-        background-color: $blanco;
-        height: 200px;
-        width: 90%;
-        margin-top: 3rem;
-    }
+
+.maps-container{
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    row-gap: 4rem;
+    align-items: center;
+
 
     & > ul {
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
-
-        & > li {
-            color: $blanco-opaco;
+        margin-left: 1rem;
+    
+    & > li {
+        color: $blanco-opaco;
         }
     }
+    } 
+
+
+.maps{
+    background-color: $blanco;
+    height: 200px;
+    width: 90%;
+    margin-top: 3rem;
+    background-color: #666;
     
 }
+
+@media screen and (min-width: 1024px){
+    .maps-container{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .maps{
+        height: 300px;
+        width: 500px;
+    }
+}
+
+
 
 
 

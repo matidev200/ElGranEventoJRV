@@ -78,6 +78,8 @@ const Register = () => {
 
         <div className="form-container">  
             <div className="relleno"></div>
+            <div className="input-row">
+
             <InputForm
             label="Nombre" 
             placeholder="Nombre"
@@ -95,6 +97,11 @@ const Register = () => {
             onChange={handleChange}
             err={err.apellido}
             />
+            </div>
+
+            <div className="input-row">
+
+
             <InputForm 
             
             label="Telefono"
@@ -113,6 +120,9 @@ const Register = () => {
             onChange={handleChange}
             err={err.mail}
             />
+            </div>
+            <div className="input-row">
+
             <InputForm 
             label="Iglesia"
             placeholder="Iglesia"
@@ -121,19 +131,24 @@ const Register = () => {
             onChange={handleChange}
             err={err.iglesia}
             />
+            </div>
             <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                 Reservá tu entrada
             </ButtonPrimary>    
         </div>
 
-        <div className="maps-container">
-            <div className="maps">maps</div>
-            <ul>
-                <li><b>Iglesia Jesucristo Rey de Vida</b></li>
-                <li>Esquina Mitre y Travi - Belén de Escobar</li>
-                <li>Viernes 18 de diciembre - 16:30hs</li>
-                <li>0348 - 4313 - 655</li>
-            </ul>
+        <div className="maps-section">
+            <div className="maps-container">
+                <div className="maps"></div>
+                <ul>
+                    <FormattedMessage id="Register.direccion">{(message) => <li><b>{message}</b></li>}</FormattedMessage>
+                    <FormattedMessage id="Register.calles">{(message) => <li>{message}</li>}</FormattedMessage>
+                    <FormattedMessage id="Register.fecha">{(message) => <li>{message}</li>}</FormattedMessage>
+                    <FormattedMessage id="Register.numero">{(message) => <li>{message}</li>}</FormattedMessage>
+
+                    <li></li>
+                </ul>
+            </div>
         </div>
     </>
     )

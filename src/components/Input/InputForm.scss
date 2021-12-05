@@ -2,26 +2,30 @@
 
 
 
+
+
+
 .input-container {
     display: flex;
     flex-direction: column;
     row-gap: .5rem;
-    width: 90%;
-
+    width: 100%;
+    
     @media screen and (min-width: 768px) {
         .input-label{
-            font-size: 18px;
+            font-size: 16px;
+            text-transform: uppercase;
         } 
 
         .input {
-            height: 45px;
+            height: 55px;
+            font-size: 18px;
         }
 
         .input::placeholder {
             font-size: 18px;
         }
     }
-
    
 }
 
@@ -33,17 +37,25 @@
 }
 
 .input{
-    padding: 10px 
+    padding: 10px;
+    font-family: $fuente-base;
 }
 
 .input::placeholder{
     font-family: $fuente-base;
 }
+
 .error{
     border: 1px solid #c00;
-    padding: 10px;
+    padding: 15px;
     &::placeholder{
-        
+        color: #c00;
         font-family: $fuente-base;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 55px;
+        font-size: 16px; 
+        color: #c00;   
     }
 }

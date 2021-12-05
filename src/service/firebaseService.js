@@ -14,7 +14,7 @@ export const obtenerDatos = async() => {
 
 export const postData = async(data) => {
     
-    if(docs.length < 5){
+    if(docs.length < 200){
         console.log('Entrada reservada')
         const docRef = await addDoc(collection(db, 'usuarios'), {
             nombre: data.nombre,
