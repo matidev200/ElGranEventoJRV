@@ -7,12 +7,13 @@ import fondo_subpaginas from '../../assets/fondo_subpaginas.jpg'
 import Logo from '../../assets/Logo.svg'
 import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
 import { FormattedMessage } from "react-intl";
+import Spin from '../../components/Spin/Spin'
 
 const Register = () => {
     const [err, setErr] = useState({
         nombre:true,
         apellido:true,
-        mail:true,
+        correo:true,
         iglesia:true,
         telefono:true,
         err: false
@@ -22,7 +23,7 @@ const Register = () => {
         setErr({
             nombre: obj.nombre.length > 3,
             apellido:  obj.apellido.length > 3,
-            mail:  obj.mail.length > 3,
+            correo:  obj.correo.length > 3,
             iglesia:   obj.iglesia.length > 3,
             telefono: obj.telefono.length > 3,
         })
@@ -32,7 +33,7 @@ const Register = () => {
     const [value, setValue] = useState({
         nombre: '',
         apellido: '',
-        mail: '',
+        correo: '',
         iglesia: '',
         telefono: '',
     })
@@ -47,22 +48,34 @@ const Register = () => {
         const error = {
             nombre: obj.nombre.length > 3,
             apellido:  obj.apellido.length > 3,
-            mail:  obj.mail.length > 3,
+            correo:  obj.correo.length > 3,
             iglesia:   obj.iglesia.length > 3,
             telefono: obj.telefono.length > 3,
         }
         return Object.values(error).some(e => e === false)
     }
 
+
+    const [spinning, setSpinning] = useState(false)
+
+    const handleSpinning = () => {
+        setSpinning(true)
+    }
+
     const sendData = (value) => {
-        console.log(value)
+        
+        
         validation(value)
         const val2 = validation2(value)
        
         if(val2) {
            console.log(val2)
         
-        } else postData(value)
+        } 
+        else {
+            handleSpinning()
+            postData(value, setSpinning)
+        }
     }
 
     return (
@@ -118,7 +131,7 @@ const Register = () => {
             name="correo"
             type="mail"
             onChange={handleChange}
-            err={err.mail}
+            err={err.correo}
             />
             </div>
             <div className="input-row">
@@ -134,9 +147,10 @@ const Register = () => {
             </div>
             <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                 Reservá tu entrada
-            </ButtonPrimary>    
+            </ButtonPrimary>   
+           
         </div>
-
+      {  spinning ? <Spin /> : null}
         <div className="maps-section">
             <div className="maps-container">
                 <div className="maps"></div>
@@ -145,8 +159,6 @@ const Register = () => {
                     <FormattedMessage id="Register.calles">{(message) => <li>{message}</li>}</FormattedMessage>
                     <FormattedMessage id="Register.fecha">{(message) => <li>{message}</li>}</FormattedMessage>
                     <FormattedMessage id="Register.numero">{(message) => <li>{message}</li>}</FormattedMessage>
-
-                    <li></li>
                 </ul>
             </div>
         </div>
