@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import Logo from "../../assets/Logo.svg"
 import will from "../../assets/will.jpeg"
 import ttl from "../../assets/ttlb.svg"
-import './Invitados.css'
+import './Invitados.css';
 
 const Oradores = () => {
 
