@@ -1,0 +1,152 @@
+@import "../../public/style/base.css";
+
+
+
+
+
+.register-description{
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    font-weight: var(--light);
+}
+
+.register-logo{
+        width: 200px;
+}
+
+.register-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 370px;
+}
+    
+   
+
+
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    background-color:var(--color-register);
+    padding-bottom: 5rem;
+}
+
+.input-row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 90%;
+}
+
+
+.btn-register {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 80%;
+   
+    
+  }
+.maps-section{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+} 
+
+
+.maps-container{
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    row-gap: 4rem;
+    align-items: center;
+}
+
+.maps-container ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-left: 1rem;
+}
+
+.maps-container li {
+    color: var(--blanco-opaco);
+}
+
+
+.maps{
+    background-color: var(--blanco);
+    height: 200px;
+    width: 90%;
+    margin-top: 3rem;
+    background-color: #666;
+    
+}
+
+@media screen and (min-width: 1024px){
+    .maps-container{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .maps{
+        height: 300px;
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 670px) {
+    .register-description {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .register-info{
+        height: 470px;
+    }
+     .register-description {
+        width: 60%;
+    }
+
+    .register-logo {
+           width: 250px;
+    }
+    .btn-register button{
+        font-size: 16px;
+        width: 40%;
+    }
+ 
+}
+
+@media screen and (min-width: 1024px) {
+    .register-info{
+        height: 570px;
+    }
+    
+
+    .register-logo {
+        width: 500px;
+    }
+
+    .input-row{
+        flex-direction: row;
+        column-gap: 1rem;
+        width: 50%;
+    }
+    
+    .btn-register button{
+        font-size: 18px;
+    }
+}
+
+
+
+

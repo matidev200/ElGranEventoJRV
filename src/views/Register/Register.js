@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Register.scss'
+import './Register.css'
 import InputForm from '../../components/Input/InputForm'
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import {postData} from '../../service/firebaseService'

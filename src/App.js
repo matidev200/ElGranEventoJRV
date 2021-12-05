@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import '../src/public/style/base.scss';
+import '../src/public/style/base.css';
 import { IntlProvider } from "react-intl";
 import NavBar from './components/NavBar/NavBar';
 import { messages as allMessages } from './messages/messages';

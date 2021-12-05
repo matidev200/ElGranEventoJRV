@@ -2,7 +2,7 @@
 import React from 'react'
 import fondo_subpaginas from '../../assets/fondo_subpaginas.jpg';
 
-import './ImagenSubPagina.scss'
+import './ImagenSubPagina.css'
 
 
 

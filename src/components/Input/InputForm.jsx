@@ -1,5 +1,5 @@
 import React from "react"
-import "./InputForm.scss"
+import "./InputForm.css"
 
 const InputForm = ({placeholder, label, name, type, onChange, err, className}) => { 
     return(
