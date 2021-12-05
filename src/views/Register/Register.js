@@ -5,6 +5,8 @@ import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import {postData} from '../../service/firebaseService'
 import fondo_subpaginas from '../../assets/fondo_subpaginas.jpg'
 import Logo from '../../assets/Logo.svg'
+import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
+import { FormattedMessage } from "react-intl";
 
 const Register = () => {
     const [err, setErr] = useState({
@@ -67,18 +69,17 @@ const Register = () => {
         <>
         <div className="relleno"></div>
         
-        <div className="imagen-subpagina">
-             <h1 className="registro-titulo">Registro</h1>
-            <img src={fondo_subpaginas} alt="fondo-subpagina" />
-        </div>
+        <ImagenSubPagina>Registro</ImagenSubPagina>
 
         <div className="register-info">
-            <img src={Logo} alt="logo"/>
-            <p>Queremos que todos puedan disfrutar este tiempo con nosotros, por eso la entrada es libre y gratuita. Para poder obtenerla solo debes llenar el siguiente formulario y descargar el código QR. Te recordamos que la iglesia tiene capacidad límitada, por lo que te recomendamos sacar tu entrada lo antes posible para asegurarte tu lugar.</p>
+            <img src={Logo} alt="logo" className="register-logo"/>
+            <FormattedMessage id="Register.descripcion">{(message) => <p className="register-description">{message}</p>}</FormattedMessage>
         </div>
 
         <div className="form-container">  
             <div className="relleno"></div>
+            <div className="input-row">
+
             <InputForm
             label="Nombre" 
             placeholder="Nombre"
@@ -96,6 +97,11 @@ const Register = () => {
             onChange={handleChange}
             err={err.apellido}
             />
+            </div>
+
+            <div className="input-row">
+
+
             <InputForm 
             
             label="Telefono"
@@ -114,6 +120,9 @@ const Register = () => {
             onChange={handleChange}
             err={err.mail}
             />
+            </div>
+            <div className="input-row">
+
             <InputForm 
             label="Iglesia"
             placeholder="Iglesia"
@@ -122,19 +131,24 @@ const Register = () => {
             onChange={handleChange}
             err={err.iglesia}
             />
+            </div>
             <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                 Reservá tu entrada
             </ButtonPrimary>    
         </div>
 
-        <div className="maps-container">
-            <div className="maps">maps</div>
-            <ul>
-                <li><b>Iglesia Jesucristo Rey de Vida</b></li>
-                <li>Esquina Mitre y Travi - Belén de Escobar</li>
-                <li>Viernes 18 de diciembre - 16:30hs</li>
-                <li>0348 - 4313 - 655</li>
-            </ul>
+        <div className="maps-section">
+            <div className="maps-container">
+                <div className="maps"></div>
+                <ul>
+                    <FormattedMessage id="Register.direccion">{(message) => <li><b>{message}</b></li>}</FormattedMessage>
+                    <FormattedMessage id="Register.calles">{(message) => <li>{message}</li>}</FormattedMessage>
+                    <FormattedMessage id="Register.fecha">{(message) => <li>{message}</li>}</FormattedMessage>
+                    <FormattedMessage id="Register.numero">{(message) => <li>{message}</li>}</FormattedMessage>
+
+                    <li></li>
+                </ul>
+            </div>
         </div>
     </>
     )
