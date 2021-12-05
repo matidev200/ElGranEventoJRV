@@ -3,10 +3,6 @@ import './Spin.css';
 
 const Spin = () => {
 
-    
-
-
-
     return (
         <div className="spinner-container">
             <div className="loader">

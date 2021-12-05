@@ -5,15 +5,15 @@
 
 
 .spinner-container{
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background: var(--body);
-    z-index: 3;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--body);
+  z-index: 3;
 }
 
 
@@ -33,18 +33,18 @@
   
 }
 
-.load .one {
+.load.one {
   stroke: var(--orange);
   animation: load 1.5s infinite;
 }
 
-.load .two {
+.load.two {
   stroke: var(--color-register);
   animation: load 1.5s infinite;
   animation-delay: 0.1s;
 }
 
-.load .three {
+.load.three {
   stroke: var(--color-register);
   animation: load 1.5s infinite;
   animation-delay: 0.2s;
@@ -55,18 +55,18 @@
   
 }
 
-.point .one {
+.point.one {
   fill: var(--orange);
   animation-delay: 0s;
 }
-.point .two {
+.point.two {
   fill: var(--color-register);
   animation-delay: 0.1s;
 }
-.point .three {
+.point.three {
   fill: var(--orange);
   animation-delay: 0.2s;
-}
+} 
 
 @keyframes bounce {
   0%,
