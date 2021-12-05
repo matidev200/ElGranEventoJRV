@@ -12,6 +12,8 @@ import Footer from './components/Footer/Footer'
 import Invitados from './views/Invitados/Invitados';
 import Spin from './components/Spin/Spin'
 
+// cristo rey
+
 const App = () => {
   const currentLocale = "es";
   const messages = allMessages[currentLocale];
