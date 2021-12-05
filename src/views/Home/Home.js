@@ -8,14 +8,14 @@ import { FormattedMessage } from "react-intl";
 import './Home.scss'
 
 const Home = () => {
-    const view = () => window.screen.width < 1101
-    console.log(view())
+    let view = window.screen.width < 1101
+    console.log(view)
     return (
         <div className="home">
             <header className="img-header-home">
                 <img
                     alt="bg-will"
-                    src={view() < 1101 ? HomeBackgroundMobile : HomeBackGround}
+                    src={window.screen.width < 1101 ? HomeBackgroundMobile : HomeBackGround}
                 />
                 <div className="title-img-home">
                     <FormattedMessage id="Home.versiculo">{(message) => <p>{message}</p>}</FormattedMessage>

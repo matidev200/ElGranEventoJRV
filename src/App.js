@@ -24,13 +24,11 @@ const App = () => {
       <Router className="App">
         <IntlProvider locale={currentLocale} messages={messages}>
         <NavBar />
-       
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/registro" component={Register} />
             <Route exact path="/invitado" component={Invitados} />
           </Switch>
-       
         <Footer /> 
         </IntlProvider>
       </Router>

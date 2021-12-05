@@ -3,7 +3,6 @@ import './Register.scss'
 import InputForm from '../../components/Input/InputForm'
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import {postData} from '../../service/firebaseService'
-import fondo_subpaginas from '../../assets/fondo_subpaginas.jpg'
 import Logo from '../../assets/Logo.svg'
 import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
 import { FormattedMessage } from "react-intl";
