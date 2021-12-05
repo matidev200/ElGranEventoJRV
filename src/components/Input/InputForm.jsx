@@ -8,10 +8,10 @@ const InputForm = ({placeholder, label, name, type, onChange, err, className}) =
             <input  
             placeholder={
                 err ? placeholder : `Debe ser un ${name} correcto`}
-            name={name}
-            type={type}
-            onChange={onChange}
-            className={err ? "input" : "error"}/>
+                name={name}
+                type={type}
+                onChange={onChange}
+                className={err ? "input" : "error"}/>
         </div>
     )
 }
