@@ -113,9 +113,9 @@ const Register = () => {
             />
             <InputForm
             
-            label="Mail" 
-            placeholder="Mail"
-            name="mail"
+            label="Correo" 
+            placeholder="Correo"
+            name="correo"
             type="mail"
             onChange={handleChange}
             err={err.mail}
