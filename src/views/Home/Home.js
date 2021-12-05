@@ -5,7 +5,7 @@ import Logo from "../../assets/Logo.svg"
 import ttl from "../../assets/ttl.svg"
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import { FormattedMessage } from "react-intl";
-import './Home.css'
+import './Home.css';
 
 const Home = () => {
     let view = window.screen.width < 1101
