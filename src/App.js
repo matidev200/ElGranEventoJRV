@@ -11,6 +11,7 @@ import { obtenerDatos } from './service/firebaseService';
 import Footer from './components/Footer/Footer'
 import Invitados from './views/Invitados/Invitados';
 import Spin from './components/Spin/Spin'
+import Ticket from './views/Ticket/Ticket';
 
 // cristo rey
 
@@ -23,7 +24,7 @@ const App = () => {
   }, [])
 
   return (
-    
+
       <Router className="App">
         <IntlProvider locale={currentLocale} messages={messages}>
         <NavBar />
@@ -31,6 +32,7 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/registro" component={Register} />
             <Route exact path="/invitado" component={Invitados} />
+            <Route exact path="/ticket" component={Ticket} />
           </Switch>
         <Footer /> 
       

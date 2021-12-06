@@ -2,7 +2,7 @@ import {collection, getDocs, addDoc} from 'firebase/firestore';
 import db from '../config/firebase';
 
 let pendientes = [];
-let docs = [];
+export let docs = [];
 
 export const obtenerDatos = async() => {
     const querySnapshot = await getDocs(collection(db, 'usuarios'))
@@ -10,8 +10,8 @@ export const obtenerDatos = async() => {
     querySnapshot.forEach((doc) => {
       docs.push({...doc.data(), id: doc.id})
     })
-
 }
+
 
 export const obtenerPendientes = async() => {
     const querySnapshot = await getDocs(collection(db, 'pendientes'))
@@ -50,7 +50,8 @@ const validarCorreo = async(correo) => {
 }
 
 const chooseFunction = async(data) => {
-    if(docs.length < 2){
+    if(docs.length < 220){
+
         console.log('Entrada reservada')
         const docRef = await addDoc(collection(db, 'usuarios'), {
             nombre: data.nombre,
@@ -90,5 +91,7 @@ export const postData = async(data, setSpinning) => {
     setSpinning(false)
 }        
 }
+
+
 
 

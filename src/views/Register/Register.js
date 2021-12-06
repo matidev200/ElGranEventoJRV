@@ -8,6 +8,11 @@ import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
 import { FormattedMessage } from "react-intl";
 import Spin from '../../components/Spin/Spin'
 
+
+
+
+
+
 const Register = () => {
     const [err, setErr] = useState({
         nombre:true,
@@ -57,12 +62,14 @@ const Register = () => {
 
     const [spinning, setSpinning] = useState(false)
 
+   
     const handleSpinning = () => {
         setSpinning(true)
     }
 
+    
+
     const sendData = (value) => {
-        
         
         validation(value)
         const val2 = validation2(value)
@@ -77,8 +84,13 @@ const Register = () => {
         }
     }
 
+   
+
     return (
         <>
+
+       
+        
         <div className="relleno"></div>
         
         <ImagenSubPagina>Registro</ImagenSubPagina>
@@ -149,7 +161,7 @@ const Register = () => {
             </ButtonPrimary>   
            
         </div>
-      {  spinning ? <Spin /> : null}
+      {  spinning ? <Spin /> : null }
         <div className="maps-section">
             <div className="maps-container">
                 <div className="maps"></div>
