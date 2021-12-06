@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import '../src/public/style/base.scss';
+import '../src/public/style/base.css';
 import { IntlProvider } from "react-intl";
 import NavBar from './components/NavBar/NavBar';
 import { messages as allMessages } from './messages/messages';
@@ -11,6 +11,9 @@ import { obtenerDatos } from './service/firebaseService';
 import Footer from './components/Footer/Footer'
 import Invitados from './views/Invitados/Invitados';
 import Spin from './components/Spin/Spin'
+import Ticket from './views/Ticket/Ticket';
+
+// cristo rey
 
 const App = () => {
   const currentLocale = "es";
@@ -21,7 +24,7 @@ const App = () => {
   }, [])
 
   return (
-    
+
       <Router className="App">
         <IntlProvider locale={currentLocale} messages={messages}>
         <NavBar />
@@ -29,6 +32,7 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/registro" component={Register} />
             <Route exact path="/invitado" component={Invitados} />
+            <Route exact path="/ticket/:id" component={Ticket} />
           </Switch>
         <Footer /> 
       

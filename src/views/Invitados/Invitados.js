@@ -2,10 +2,11 @@ import React from 'react'
 import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
 import { ButtonPrimary } from '../../components/Buttons/Buttons';
 import { FormattedMessage } from "react-intl";
+import { Link } from 'react-router-dom'
 import Logo from "../../assets/Logo.svg"
 import will from "../../assets/will.jpeg"
 import ttl from "../../assets/ttlb.svg"
-import './Invitados.scss'
+import './Invitados.css';
 
 const Oradores = () => {
 
@@ -30,7 +31,9 @@ const Oradores = () => {
                 </div>
             </section>
             <section className="content-home">
-                <ButtonPrimary className="btn-reserva">Reservá tu lugar</ButtonPrimary>
+                <Link to="/registro">
+                    <ButtonPrimary className="btn-reserva">Reservá tu lugar</ButtonPrimary>
+                </Link>
                 <div className="organiza-home">
                     <p>Organiza:</p>
                     <p>Jesucristo Rey de Vida</p>

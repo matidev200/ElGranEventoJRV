@@ -5,7 +5,8 @@ import Logo from "../../assets/Logo.svg"
 import ttl from "../../assets/ttl.svg"
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import { FormattedMessage } from "react-intl";
-import './Home.scss'
+import { Link } from 'react-router-dom'
+import './Home.css';
 
 const Home = () => {
     let view = window.screen.width < 1101
@@ -33,7 +34,9 @@ const Home = () => {
                 <FormattedMessage id="Home.title">{(message) => <h1>{message}</h1>}</FormattedMessage>
                 <FormattedMessage id="Home.content">{(message) => <p>{message}</p>}</FormattedMessage>
                 <FormattedMessage id="Home.fecha">{(message) => <h3>{message}</h3>}</FormattedMessage>
-                <ButtonPrimary className="btn-reserva">Reservá tu lugar</ButtonPrimary>
+                <Link to="/registro">
+                    <ButtonPrimary className="btn-reserva">Reservá tu lugar</ButtonPrimary>
+                </Link>
                 <div className="organiza-home">
                     <p>Organiza:</p>
                     <p>Jesucristo Rey de Vida</p>

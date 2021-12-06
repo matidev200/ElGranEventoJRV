@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import './Spin.scss';
+import React from 'react';
+import './Spin.css';
 
 const Spin = () => {
-
-    
-
-
 
     return (
         <div className="spinner-container">

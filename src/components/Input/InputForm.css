@@ -1,0 +1,65 @@
+@import "../../public/style/base.css";
+
+
+
+
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    width: 100%;
+   
+}
+
+.input-label{
+    color: var(--blanco);
+    font-family: var(--fuente-base);
+    font-weight: var(--light);
+    font-size: 14px;
+}
+
+.input{
+    padding: 10px;
+    font-family: var(--fuente-base);
+}
+
+.input::placeholder{
+    font-family: var(--fuente-base);
+}
+
+.error{
+    border: 1px solid #c00;
+    padding: 15px;
+    
+
+    
+}
+
+.error::placeholder{
+    color: #c00;
+    font-family: var(--fuente-base);
+}
+
+
+@media screen and (min-width: 768px) {
+    .error{
+        height: 55px;
+        font-size: 16px; 
+        color: #c00;
+    }   
+    .input-label{
+        font-size: 16px;
+        text-transform: uppercase;
+    } 
+
+    .input {
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .input::placeholder {
+        font-size: 18px;
+    }
+}

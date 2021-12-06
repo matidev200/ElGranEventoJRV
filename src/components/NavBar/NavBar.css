@@ -1,7 +1,7 @@
-@import "../../public/style/base.scss";
+@import "../../public/style/base.css";
 
 .nav {
-    font-family: $fuente-base;
+    font-family: var(--fuente-base);
     top: 0;
     height: 80px;
     background-color: transparent;
@@ -9,15 +9,16 @@
     align-items: center;
     justify-content: flex-end;
     filter: drop-shadow(0px 6px 10px rgba(10, 10, 10, 0.25));
-    @media (min-width: 1100px) {
-        justify-content: flex-start;
-    }
-    &:hover {
-        background: $color-nav;
-    }
+   
+    
 }
+
+.nav:hover {
+    background: var(--color-nav);
+}
+
 .bg-change {
-    background: $color-nav;
+    background: var(--color-nav);
 }
 .nav-position {
     position: fixed;
@@ -26,13 +27,13 @@
     z-index: 2;
 }
 .nav-change-color {
-    background-color: $color-nav;
+    background-color: var(--color-nav);
     transition: all 0.5s;
 }
 
 .logo {
     margin-left: 10px;
-    font-weight: $bold;
+    font-weight: var(--bold);
 }
 
 .menu-btn {
@@ -45,9 +46,7 @@
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     margin-right: 20px;
-    @media (min-width: 1100px) {
-        display: none;
-    }
+    
     z-index: 1;
 }
 
@@ -100,44 +99,23 @@
     display: none;
     height: 100vh;
     right: -100%;
-    background-color: $color-base;
+    background-color: var(--color-base);
 
     transition: all 0.8s;
-    @media (min-width: 1100px) {
-        display: flex;
-        position: relative;
-        padding-left: 0rem;
-        max-width: 500px;
-        width: 100%;
-        top: 0;
-        right: 0;
-        flex-direction: row;
-        background-color: transparent;
-        align-items: center;
-        justify-content: space-around;
+    
+   
+}
 
-        .is-active::after {
-            content: "";
-            position: absolute;
-            background-color: #ffffff;
-            left: -15%;
-            bottom: -10px;
-            width: 130%;
-            height: 3px;
-            transition: all 1s;
-            border-radius: 4px;
-        }
-    }
-    & > li {
-        transition: all 1s;
-        position: relative;
-        cursor: pointer;
-        color: $blanco-opaco;
-        height: fit-content;
-        & a {
-            text-decoration: none;
-        }
-    }
+.nav__ul li {
+    transition: all 1s;
+    position: relative;
+    cursor: pointer;
+    color: var(--blanco-opaco);
+    height: fit-content;
+}
+
+.nav__ul li  a {
+    text-decoration: none;
 }
 
 .active {
@@ -149,9 +127,11 @@
     flex-direction: column;
     justify-content: center;
     row-gap: 4rem;
-    & > li {
-        margin-left: 2rem;
-    }
+    
+}
+
+.active li{
+    margin-left: 2rem; 
 }
 
 @keyframes navTransition {
@@ -172,6 +152,47 @@
     max-height: 95px;
     overflow: hidden;
     @media (min-width: 1100px) {
+        
+    }
+}
+
+@media (min-width: 1100px) {
+    .nav{
+        justify-content: flex-start;
+    }
+    .menu-btn{
+        display: none;
+    }
+
+    .nav__ul{
+        display: flex;
+        position: relative;
+        padding-left: 0rem;
+        max-width: 500px;
+        width: 100%;
+        top: 0;
+        right: 0;
+        flex-direction: row;
+        background-color: transparent;
+        align-items: center;
+        justify-content: space-around;
+
+        
+    }
+
+    .nav__ul .is-active::after {
+        content: "";
+        position: absolute;
+        background-color: #ffffff;
+        left: -15%;
+        bottom: -10px;
+        width: 130%;
+        height: 3px;
+        transition: all 1s;
+        border-radius: 4px;
+    }
+
+    .logo-nav{
         display: none;
     }
 }

@@ -1,14 +1,26 @@
 import React, { useState } from 'react'
-import './Register.scss'
+import './Register.css'
 import InputForm from '../../components/Input/InputForm'
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
 import {postData} from '../../service/firebaseService'
 import Logo from '../../assets/Logo.svg'
 import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
 import { FormattedMessage } from "react-intl";
-import Spin from '../../components/Spin/Spin'
+import Spin from '../../components/Spin/Spin';
+import {useHistory} from 'react-router-dom'
+
+
+
 
 const Register = () => {
+
+    const history = useHistory();
+
+    const [spinning, setSpinning] = useState(false)
+
+   
+    
+
     const [err, setErr] = useState({
         nombre:true,
         apellido:true,
@@ -17,6 +29,9 @@ const Register = () => {
         telefono:true,
         err: false
     })
+
+
+    const [datosRepetidosError, setDatosRepetidosError] = useState(false)
     
     const validation = (obj) => {
         setErr({
@@ -55,15 +70,15 @@ const Register = () => {
     }
 
 
-    const [spinning, setSpinning] = useState(false)
 
     const handleSpinning = () => {
         setSpinning(true)
     }
 
-    const sendData = (value) => {
-        
-        
+    
+
+    const sendData = async(value) => {
+        console.log(value)
         validation(value)
         const val2 = validation2(value)
        
@@ -73,12 +88,24 @@ const Register = () => {
         } 
         else {
             handleSpinning()
-            postData(value, setSpinning)
+            const id = await postData(value, setSpinning)
+            console.log(id)
+            if(id){
+                history.replace(`/ticket/${id}`)
+                
+            } else {
+                setDatosRepetidosError(true)
+            }
         }
     }
 
+
+
     return (
         <>
+
+       
+        
         <div className="relleno"></div>
         
         <ImagenSubPagina>Registro</ImagenSubPagina>
@@ -115,7 +142,6 @@ const Register = () => {
 
 
             <InputForm 
-            
             label="Telefono"
             placeholder="Telefono"
             name="telefono"
@@ -143,13 +169,14 @@ const Register = () => {
             onChange={handleChange}
             err={err.iglesia}
             />
+            {datosRepetidosError ? <label className="error-repetido">Los datos ya fueron ingresados previamente</label> : null}
             </div>
             <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                 Reservá tu entrada
             </ButtonPrimary>   
            
         </div>
-      {  spinning ? <Spin /> : null}
+      {  spinning ? <Spin /> : null }
         <div className="maps-section">
             <div className="maps-container">
                 <div className="maps"></div>

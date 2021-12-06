@@ -1,0 +1,91 @@
+@import "../../public/style/base.css";
+
+
+
+
+
+.spinner-container{
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--body);
+  z-index: 3;
+}
+
+
+.loader {
+  width: 150px;
+  height: 150px;
+}
+.spin-svg {
+  width: 90%;
+  fill: none;
+}
+
+.load {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 570;
+  stroke-width: 20px;
+  
+}
+
+.load.one {
+  stroke: var(--orange);
+  animation: load 1.5s infinite;
+}
+
+.load.two {
+  stroke: var(--color-register);
+  animation: load 1.5s infinite;
+  animation-delay: 0.1s;
+}
+
+.load.three {
+  stroke: var(--color-register);
+  animation: load 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.point {
+  animation: bounce 1s infinite ease-in-out;
+  
+}
+
+.point.one {
+  fill: var(--orange);
+  animation-delay: 0s;
+}
+.point.two {
+  fill: var(--color-register);
+  animation-delay: 0.1s;
+}
+.point.three {
+  fill: var(--orange);
+  animation-delay: 0.2s;
+} 
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 570;
+  }
+  50% {
+    stroke-dashoffset: 530;
+  }
+  100% {
+    stroke-dashoffset: 570;
+    transform: rotate(360deg);
+  }
+}
