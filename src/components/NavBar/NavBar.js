@@ -7,9 +7,9 @@ const NavBar = () => {
     const [sideBar, setSideBar] = useState(false)
     const [nav, seNav] = useState(false)
     const [underline, setUnderline] = useState({
-        home: "is-active",
-        reg: "",
-        inv: "",
+        home: window.location.pathname.slice(1) === "" ? "is-active" : "",
+        reg: window.location.pathname.slice(1) === "registro" ? "is-active" : "",
+        inv: window.location.pathname.slice(1) === "invitado" ? "is-active" : "",
     })
     const changeBg = () => {
         if (window.scrollY >= 100) {
@@ -19,7 +19,6 @@ const NavBar = () => {
         }
     }
     window.addEventListener('scroll', changeBg)
-
     const showSideBar = () => {
         setSideBar(!sideBar)
     }

@@ -2,7 +2,7 @@ import React from 'react'
 import {ButtonPrimary} from '../../components/Buttons/Buttons';
 import { FormattedMessage } from "react-intl";
 import Logo from "../../assets/Logo-negro.svg";
-import './Ticket.css';
+import './TIcket.css';
 import qr from '../../assets/qr.png'
 
 

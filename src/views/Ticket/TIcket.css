@@ -1,14 +1,14 @@
 @import "../../public/style/base.css";
 
-.ticket-container{
+.ticket-container {
     display: flex;
     justify-content: center;
-    
+
     position: relative;
 }
 
 
-.ticket{
+.ticket {
     background-color: var(--color-ticket);
     margin-bottom: 2rem;
     width: 90%;
@@ -16,25 +16,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     min-width: 280px;
     max-width: 420px;
     max-height: 1033px;
     min-height: 1033px;
-   
+
 }
 
-.ticket h3, h1, p{
-    color: var(--color-base); 
+.ticket>h3, .ticket>h1, .ticket>p {
+    color: var(--color-base);
     text-align: center;
 }
 
-.ticket h1 {
+.ticket>h1 {
     margin-bottom: 2rem;
     margin-top: 2.5rem;
 }
 
-.ticket p {
+.ticket>p {
     width: 95%;
     margin-top: 2rem;
 }
@@ -43,22 +43,22 @@
     color: var(--color-base);
 }
 
-.ticket-qr{
+.ticket-qr {
     width: 280px;
-    
+
 }
 
-.btn-descarga-ticket button{
+.btn-descarga-ticket button {
     margin-bottom: -30px;
     border-radius: 10px;
     width: 260px;
 }
 
-.volver-inicio-ticket{
+.volver-inicio-ticket {
     margin-bottom: 4rem;
 }
 
-.volver-inicio-ticket button{
+.volver-inicio-ticket button {
     background-color: transparent;
     border: 1px solid #232323;
     color: #232323;
