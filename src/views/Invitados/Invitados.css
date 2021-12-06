@@ -46,13 +46,12 @@
 
 .inv-section-two {
     row-gap: 1rem;
-    background: var(--color-registe);
+    background: var(--color-register);
     padding: 4rem;
     padding-top: 0;
     padding-bottom: 5rem;
     display: flex;
     justify-content: center;
-    background-color: var(--color-footer);
     width: 100%;
     
 }
