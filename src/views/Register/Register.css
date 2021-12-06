@@ -1,6 +1,8 @@
 @import "../../public/style/base.css";
 
-
+.error-repetido{
+    color: var(--orange);
+}
 
 .registro-titulo{
     color: var(--blanco);
@@ -25,9 +27,6 @@
     height: 370px;
 }
     
-   
-
-
 
 
 .form-container{
