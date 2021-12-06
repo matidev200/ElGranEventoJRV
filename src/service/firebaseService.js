@@ -1,10 +1,16 @@
-import {collection, getDocs, addDoc} from 'firebase/firestore';
+import {collection, getDocs, addDoc,doc, getDoc} from 'firebase/firestore';
 import db from '../config/firebase';
+
+
+
+
 
 let pendientes = [];
 export let docs = [];
 
+
 export const obtenerDatos = async() => {
+
     const querySnapshot = await getDocs(collection(db, 'usuarios'))
     
     querySnapshot.forEach((doc) => {
@@ -60,6 +66,8 @@ const chooseFunction = async(data) => {
             iglesia: data.iglesia,
             telefono: data.telefono
     });
+    return docRef.id
+
     
     // console.log(docRef)
 } else {
@@ -83,8 +91,10 @@ export const postData = async(data, setSpinning) => {
             console.log('correo repetido')
             return;
         } 
-        await chooseFunction(data)
+        const id = await chooseFunction(data)
         setSpinning(false)
+        return id;
+        
         
 } catch (e) {
     console.log(e)
@@ -92,6 +102,22 @@ export const postData = async(data, setSpinning) => {
 }        
 }
 
+
+
+export const getNameById = async(id, setUsuario) => {
+   try{ const nameById = doc(db, 'usuarios', id);
+    const docSnap = await getDoc(nameById)
+    
+    setUsuario({
+        nombre: docSnap.data().nombre,
+        apellido: docSnap.data().apellido
+    })
+    }catch (e){
+        console.log("dato repetido")
+    }
+
+   
+}
 
 
 
