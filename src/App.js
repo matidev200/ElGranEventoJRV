@@ -10,7 +10,6 @@ import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
 import { obtenerDatos } from './service/firebaseService';
 import Footer from './components/Footer/Footer'
 import Invitados from './views/Invitados/Invitados';
-import Spin from './components/Spin/Spin'
 import Ticket from './views/Ticket/Ticket';
 
 // cristo rey

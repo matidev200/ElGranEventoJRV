@@ -85,11 +85,12 @@
 
 .maps{
     background-color: var(--blanco);
+    max-width: 90vw;
     height: 200px;
     width: 90%;
     margin-top: 3rem;
     background-color: #666;
-    
+    overflow: hidden;
 }
 
 @media screen and (min-width: 1024px){
@@ -101,6 +102,9 @@
     .maps{
         height: 300px;
         width: 500px;
+        max-width: 90vw;
+        overflow: hidden;
+
     }
 }
 
