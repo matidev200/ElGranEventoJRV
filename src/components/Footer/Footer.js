@@ -20,11 +20,11 @@ const Footer = () => {
                 <ul className="footer__ul">
                     <li className="footer__ul-title">Contacto</li>
                     <li><img src={whs} alt="whs" /><p>0348-4313-655</p></li>
+                    {/* <li><img src={whs} alt="whs" /><a href="https://wa.me/03484313655" target="_blank" rel="noreferrer">0348-4313-655</a></li> */}
                     <li><a href="mailto:jrvcentralescobar@gmail.com" target="_blank" rel="noreferrer">Soporte</a></li>
                     
                 </ul>
            
-
             
                 <ul className="footer__ul">
                     <li className="footer__ul-title">Dirección</li>
