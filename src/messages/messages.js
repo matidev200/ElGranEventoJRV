@@ -11,7 +11,9 @@ export const messages = {
         "Register.fecha": "Viernes 18 de diciembre - 16:30hs",
         "Register.numero" : "0348 - 4313 - 655",
         "Invitado.name" : "WILL FABRE",
+        "Invitado.name2" : "Bernabé Salazar, Pastor y Salmista.",
         "Invitado.bio" : `Will Fabre, Profeta Y Salmista oriundo de la Ciudad de Paraná entre Ríos. Desde el año 2012 en el que lanzo su primer álbum "Tu habitación" encabezando el ministerio GDA ( Generación de Adoradores) Dios lo ha usado trayendo un sonido Profético y fresco en la adoración del cuerpo de Cristo. Hoy forma parte del equipo de Toma Tu Lugar bajo el Pastorado de Marcos Brunet.`,
+        "Invitado.bio2" : `Desde el año 2007 sirve a la iglesia ministrando en la Alabanza y Adoración, con un anhelo profundo de llevar a las personas a conectarse y conocer el corazón de Dios. Líder junto a su esposa del Ministerio AvivaJoven sirve actualmente en su iglesia local en San Antonio de Areco "Centro de Avivamiento" llevando un mensaje de Fe y Pasión por la Presencia de Dios.`,
         "Invitado.ttl" : "TOMA TU LUGAR",
         "Invitado.ttlBio" : "TOMA TU LUGAR es un ministerio de adoración y sello discográfico bajo el liderazgo de Marcos Brunet, Pastor, Cantante y Misionero, nacido en brasil, quien está radicado en Argentina desde el año 2003, donde estudió teología, formó su familia y comenzó el ministerio de adoración y enseñanza TOMA TU LUGAR. El ministerio fue nombrado así por la visión que el Señor Jesús puso en el corazón de Marcos.",
         "Ticket.descripcion": "Felicidades por haber reservado tu lugar para este evento. Por favor guarda este ticket en tu celular, lo deberas presentar para poder ingresar a la iglesia."
