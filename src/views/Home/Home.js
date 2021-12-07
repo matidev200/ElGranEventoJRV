@@ -9,8 +9,7 @@ import { Link } from 'react-router-dom'
 import './Home.css';
 
 const Home = () => {
-    let view = window.screen.width < 1101
-    console.log(view)
+
     return (
         <div className="home">
             <header className="img-header-home">
