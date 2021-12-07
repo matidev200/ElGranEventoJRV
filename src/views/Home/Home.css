@@ -125,6 +125,13 @@
     background: linear-gradient(109.87deg, #E9E7E7 -10.4%, rgba(187, 206, 255, 0.68) 63.27%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.organiza-home p:nth-child(3){
+    font-size: 28px;
+    margin-top: 0.5rem;
+    background: linear-gradient(109.87deg, #E9E7E7 -10.4%, rgba(187, 206, 255, 0.68) 63.27%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     
 }
 

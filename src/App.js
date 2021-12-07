@@ -6,11 +6,12 @@ import NavBar from './components/NavBar/NavBar';
 import { messages as allMessages } from './messages/messages';
 import Home from "./views/Home/Home"
 import Register from './views/Register/Register';
-import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { obtenerDatos } from './service/firebaseService';
 import Footer from './components/Footer/Footer'
 import Invitados from './views/Invitados/Invitados';
 import Ticket from './views/Ticket/Ticket';
+import ScrollToTop from './service/SrollToTop';
 
 // cristo rey
 
@@ -24,20 +25,20 @@ const App = () => {
 
   return (
 
-      <Router className="App">
-        <IntlProvider locale={currentLocale} messages={messages}>
+    <Router className="App">
+      <IntlProvider locale={currentLocale} messages={messages}>
         <NavBar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/registro" component={Register} />
-            <Route exact path="/invitado" component={Invitados} />
-            <Route exact path="/ticket/:id" component={Ticket} />
-          </Switch>
-        <Footer /> 
-      
-        </IntlProvider>
-      </Router>
-   
+        <ScrollToTop />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/registro" component={Register} />
+          <Route exact path="/invitado" component={Invitados} />
+          <Route exact path="/ticket/:id" component={Ticket} />
+        </Switch>
+        <Footer />
+      </IntlProvider>
+    </Router>
+
   );
 }
 
