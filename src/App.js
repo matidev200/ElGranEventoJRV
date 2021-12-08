@@ -13,7 +13,7 @@ import Invitados from './views/Invitados/Invitados';
 import Ticket from './views/Ticket/Ticket';
 import ScrollToTop from './service/SrollToTop';
 import Error from './views/Error/Error'
-// cristo rey
+// cristo rey.
 
 const App = () => {
   const currentLocale = "es";
