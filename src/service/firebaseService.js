@@ -44,7 +44,7 @@ const validarCorreo = async(correo) => {
 }
 
 const chooseFunction = async(data) => {
-    if(docs.length < 2){   
+    if(docs.length < 220){   
         const docRef = await addDoc(collection(db, 'usuarios'), {
             nombre: data.nombre,
             apellido: data.apellido,
