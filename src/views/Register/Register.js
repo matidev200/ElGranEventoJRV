@@ -28,7 +28,7 @@ const Register = () => {
         setErr({
             nombre: obj.nombre.length > 3,
             apellido: obj.apellido.length > 3,
-            correo: obj.correo.length > 3,
+            correo: /^([a-zA-Z0-9._+-]+)(@[a-zA-Z0-9-.]+)(.)+(.[a-zA-Z]{2,4}){1,2}$/.test(obj.correo) ,
             iglesia: obj.iglesia.length > 3,
             telefono: obj.telefono.length > 3,
         })
@@ -55,7 +55,7 @@ const Register = () => {
         const error = {
             nombre: obj.nombre.length > 3,
             apellido: obj.apellido.length > 3,
-            correo: obj.correo.length > 3,
+            correo: /^([a-zA-Z0-9._+-]+)(@[a-zA-Z0-9-.]+)(.)+(.[a-zA-Z]{2,4}){1,2}$/.test(obj.correo),
             iglesia: obj.iglesia.length > 3,
             telefono: obj.telefono.length > 3,
         }
