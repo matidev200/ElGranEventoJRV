@@ -55,7 +55,7 @@ const validarCorreo = async(correo) => {
         return bool; 
 }
 
-const chooseFunction = async(data) => {
+const chooseFunction = async(data, setPendiente) => {
     if(docs.length < 2){
         
         
@@ -66,31 +66,35 @@ const chooseFunction = async(data) => {
             iglesia: data.iglesia,
             telefono: data.telefono
     });
+ 
     return docRef.id
 
     
     
 } else {
-
-    console.log('Tu entrada va a estar pendiente ya que se agotaron')
-    await addDoc(collection(db, 'pendientes'),{
+    
+    const docRefPendientes = await addDoc(collection(db, 'pendientes'),{
         nombre: data.nombre,
         apellido: data.apellido,
         correo: data.correo,
         iglesia: data.iglesia,
         telefono: data.telefono
-    })
+    });
+    setPendiente(true)
+    return docRefPendientes.id
 }
 }
 
-export const postData = async(data, setSpinning) => {
+export const postData = async(data, setSpinning, setPendiente) => {
     try {
+        
         const validacionCorreo = await validarCorreo(data.correo)
         if(validacionCorreo){
             setSpinning(false)
+            
             return;
         } 
-        const id = await chooseFunction(data)
+        const id = await chooseFunction(data, setPendiente)
         setSpinning(false)
         return id;
         
@@ -112,11 +116,12 @@ export const getNameById = async(id, setUsuario) => {
         apellido: docSnap.data().apellido
     })
     }catch (e){
-        console.log("dato repetido")
+        // console.log("dato repetido")
     }
 
    
 }
+
 
 
 

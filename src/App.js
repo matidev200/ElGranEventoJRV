@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer'
 import Invitados from './views/Invitados/Invitados';
 import Ticket from './views/Ticket/Ticket';
 import ScrollToTop from './service/SrollToTop';
-
+import Error from './views/Error/Error'
 // cristo rey
 
 const App = () => {
@@ -34,6 +34,7 @@ const App = () => {
           <Route exact path="/registro" component={Register} />
           <Route exact path="/invitado" component={Invitados} />
           <Route exact path="/ticket/:id" component={Ticket} />
+          <Route exact path="/error/:id" component={Error} />
           <Route component={Home} /> 
         </Switch>
         <Footer />

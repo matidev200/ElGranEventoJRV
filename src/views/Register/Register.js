@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Register.css'
 import InputForm from '../../components/Input/InputForm'
 import { ButtonPrimary } from '../../components/Buttons/Buttons'
-import { postData } from '../../service/firebaseService'
+import { postData} from '../../service/firebaseService'
 import Logo from '../../assets/Logo.svg'
 import ImagenSubPagina from '../../components/ImagenSubPagina/ImagenSubPagina'
 import { FormattedMessage } from "react-intl";
@@ -11,15 +11,14 @@ import { useHistory } from 'react-router-dom'
 
 
 
-
 const Register = () => {
-
+    
     const history = useHistory();
-
+    
     const [spinning, setSpinning] = useState(false)
 
-
-
+    const [pendiente, setPendiente] = useState(false)
+    
 
     const [err, setErr] = useState({
         nombre: true,
@@ -88,16 +87,28 @@ const Register = () => {
             return null
 
         }
-        else {
+        else{
             handleSpinning()
-            const id = await postData(value, setSpinning)
+            const id = await postData(value, setSpinning, setPendiente)
             
-            if (id) {
-                history.replace(`/ticket/${id}`)
-
-            } else {
-                setDatosRepetidosError(true)
+            
+            if(id && pendiente === false) {
+               history.replace(`/ticket/${id}`)
+                
+            } 
+            else if(id && pendiente){
+                history.replace(`/error/${id}`)
             }
+
+            else{
+                setDatosRepetidosError(true);
+            } 
+
+            
+            
+            
+
+            
         }
     }
 
