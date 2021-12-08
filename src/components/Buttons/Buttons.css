@@ -1,0 +1,12 @@
+@import "../../public/style/base.css";
+
+.btnPrimary button {
+    color: var(--blanco-opaco);
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--blanco-opaco);
+    border-radius: 2px;
+    background: var(--orange);
+    font-family: var(--fuente-base);
+    cursor: pointer;
+}

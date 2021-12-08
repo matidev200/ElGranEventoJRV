@@ -1,0 +1,69 @@
+@import "../../public/style/base.css";
+
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 380px;
+    padding: 2rem;
+    background-color: var(--color-footer);
+    flex-direction: row;
+    flex-wrap:wrap;
+    box-shadow: 0px -6px 25px 0px #0E0E0E4A;
+    
+}
+ 
+.footer__ul{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 12px;
+    list-style:none;
+}
+
+.footer__ul li{
+    font-size: 14px;
+    font-weight: var(--light);
+    color: var(--blanco-opaco);
+}
+
+.footer__ul li a {
+    font-size: 14px;
+    font-weight: var(--light);
+    color: var(--blanco-opaco);
+    text-decoration:none;
+}
+
+.footer__ul-title{
+    color: var(--blanco);
+    font-weight: bold !important;
+    font-size: 18px;
+}
+
+
+.copyright {
+    font-size: 10px;
+}
+
+@media  screen and (min-width: 521px) {
+    .footer {
+        justify-content: space-around;
+    }
+}
+
+.footer__ul>li>img{
+    width: 15px;
+    margin-right: 10px;
+    height: fit-content;
+}
+
+.footer__ul>li{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
