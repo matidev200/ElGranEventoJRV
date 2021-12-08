@@ -13,13 +13,16 @@ const Ticket = () => {
     
     const [usuario, setUsuario] = useState({})
     const { id } = useParams();
+    const arrayId = id.split(',');
+    const idFinal = arrayId[0];
     // console.log(id)
 
     useEffect(() => {
-        getNameById(id, setUsuario)
-    }, [id])
+        getNameById(idFinal, setUsuario)
+        
+    }, [idFinal]);
 
-
+    
     return (
 
         <>
