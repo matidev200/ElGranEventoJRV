@@ -4,6 +4,7 @@
     color: var(--orange);
 }
 
+
 .registro-titulo{
     color: var(--blanco);
 }
@@ -115,6 +116,8 @@
 }
 
 @media screen and (min-width: 768px) {
+
+   
     .register-info{
         height: 470px;
     }

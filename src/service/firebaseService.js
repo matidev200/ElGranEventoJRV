@@ -56,9 +56,9 @@ const validarCorreo = async(correo) => {
 }
 
 const chooseFunction = async(data) => {
-    if(docs.length < 220){
-
-        console.log('Entrada reservada')
+    if(docs.length < 2){
+        
+        
         const docRef = await addDoc(collection(db, 'usuarios'), {
             nombre: data.nombre,
             apellido: data.apellido,
@@ -69,7 +69,7 @@ const chooseFunction = async(data) => {
     return docRef.id
 
     
-    // console.log(docRef)
+    
 } else {
 
     console.log('Tu entrada va a estar pendiente ya que se agotaron')
@@ -88,7 +88,6 @@ export const postData = async(data, setSpinning) => {
         const validacionCorreo = await validarCorreo(data.correo)
         if(validacionCorreo){
             setSpinning(false)
-            console.log('correo repetido')
             return;
         } 
         const id = await chooseFunction(data)
