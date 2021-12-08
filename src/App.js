@@ -34,6 +34,7 @@ const App = () => {
           <Route exact path="/registro" component={Register} />
           <Route exact path="/invitado" component={Invitados} />
           <Route exact path="/ticket/:id" component={Ticket} />
+          <Route component={Home} /> 
         </Switch>
         <Footer />
       </IntlProvider>
