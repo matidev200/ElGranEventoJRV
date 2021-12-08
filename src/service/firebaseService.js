@@ -83,7 +83,6 @@ export const postData = async(data, setSpinning) => {
 }
 
 
-
 export const getNameById = async(id, setUsuario) => {
    try{ const nameById = doc(db, 'usuarios', id);
     const docSnap = await getDoc(nameById)
