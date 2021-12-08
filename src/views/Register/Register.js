@@ -52,6 +52,7 @@ const Register = () => {
     }
 
     const validation2 = (obj) => {
+        
         const error = {
             nombre: obj.nombre.length > 3,
             apellido: obj.apellido.length > 3,
@@ -59,6 +60,7 @@ const Register = () => {
             iglesia: obj.iglesia.length > 3,
             telefono: obj.telefono.length > 3,
         }
+
         return Object.values(error).some(e => e === false)
     }
 
