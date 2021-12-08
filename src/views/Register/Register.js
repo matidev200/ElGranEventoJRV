@@ -80,18 +80,18 @@ const Register = () => {
 
 
     const sendData = async (value) => {
-        console.log(value)
+        
         validation(value)
         const val2 = validation2(value)
 
         if (val2) {
-            console.log(val2)
+            return null
 
         }
         else {
             handleSpinning()
             const id = await postData(value, setSpinning)
-            console.log(id)
+            
             if (id) {
                 history.replace(`/ticket/${id}`)
 
@@ -171,8 +171,11 @@ const Register = () => {
                         onChange={handleChange}
                         err={err.iglesia}
                     />
-                    {datosRepetidosError ? <label className="error-repetido">Los datos ya fueron ingresados previamente</label> : null}
+                 
+
+                    
                 </div>
+                    {datosRepetidosError ? <label className="error-repetido">Los datos ya fueron ingresados previamente</label> : null}
                 <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                     Reservá tu entrada
                 </ButtonPrimary>
@@ -183,9 +186,9 @@ const Register = () => {
                 <div className="maps-container">
                     <div className="maps">
                         {window.screen.width > 1101 ?
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d411.7571656996549!2d-58.79279775012304!3d-34.34901910237332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61b0c5152471%3A0x6dca2cd3e447d445!2sJesucristo%20Rey%20de%20Vida!5e0!3m2!1sen!2sar!4v1638842473095!5m2!1sen!2sar" width="500" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" title="map"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d411.7571656996549!2d-58.79279775012304!3d-34.34901910237332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61b0c5152471%3A0x6dca2cd3e447d445!2sJesucristo%20Rey%20de%20Vida!5e0!3m2!1sen!2sar!4v1638842473095!5m2!1sen!2sar" width="500" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="map"></iframe>
                             :
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d411.7571656996549!2d-58.79279775012304!3d-34.34901910237332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61b0c5152471%3A0x6dca2cd3e447d445!2sJesucristo%20Rey%20de%20Vida!5e0!3m2!1sen!2sar!4v1638842473095!5m2!1sen!2sar" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" title="mobile-map"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d411.7571656996549!2d-58.79279775012304!3d-34.34901910237332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61b0c5152471%3A0x6dca2cd3e447d445!2sJesucristo%20Rey%20de%20Vida!5e0!3m2!1sen!2sar!4v1638842473095!5m2!1sen!2sar" width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="mobile-map"></iframe>
                         }
                     </div>
                     <ul>
