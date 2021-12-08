@@ -10,10 +10,10 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import TicketPdf from '../Ticket/TicketPdf'
 
 const Ticket = () => {
-
+    
     const [usuario, setUsuario] = useState({})
     const { id } = useParams();
-
+    // console.log(id)
 
     useEffect(() => {
         getNameById(id, setUsuario)

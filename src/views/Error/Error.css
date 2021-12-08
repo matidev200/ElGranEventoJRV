@@ -1,0 +1,8 @@
+@import "../../public/style/base.css";
+
+
+.ticket-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}

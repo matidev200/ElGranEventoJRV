@@ -11,16 +11,9 @@ import { useHistory } from 'react-router-dom'
 
 
 
-
 const Register = () => {
-
     const history = useHistory();
-
     const [spinning, setSpinning] = useState(false)
-
-
-
-
     const [err, setErr] = useState({
         nombre: true,
         apellido: true,
@@ -29,8 +22,6 @@ const Register = () => {
         telefono: true,
         err: false
     })
-
-
     const [datosRepetidosError, setDatosRepetidosError] = useState(false)
 
     const validation = (obj) => {
@@ -80,7 +71,7 @@ const Register = () => {
 
 
     const sendData = async (value) => {
-        
+
         validation(value)
         const val2 = validation2(value)
 
@@ -91,17 +82,17 @@ const Register = () => {
         else {
             handleSpinning()
             const id = await postData(value, setSpinning)
-            
-            if (id) {
+            if (Array.isArray(id) && id[1] === false) {
                 history.replace(`/ticket/${id}`)
-
-            } else {
-                setDatosRepetidosError(true)
+            }
+            else if (Array.isArray(id) && id[1]) {
+                history.replace(`/error/${id}`)
+            }
+            else {
+                setDatosRepetidosError(true);
             }
         }
     }
-
-
 
     return (
         <>
@@ -171,11 +162,11 @@ const Register = () => {
                         onChange={handleChange}
                         err={err.iglesia}
                     />
-                 
 
-                    
+
+
                 </div>
-                    {datosRepetidosError ? <label className="error-repetido">Los datos ya fueron ingresados previamente</label> : null}
+                {datosRepetidosError ? <label className="error-repetido">Los datos ya fueron ingresados previamente</label> : null}
                 <ButtonPrimary onClick={() => sendData(value)} className="btn-register">
                     Reservá tu entrada
                 </ButtonPrimary>
