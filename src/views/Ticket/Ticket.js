@@ -32,7 +32,7 @@ const Ticket = () => {
                     <FormattedMessage id="Ticket.descripcion">{(message) => <p>{message}</p>}</FormattedMessage>
                     <img className="ticket-qr" src={qr} alt="QrLogo" />
                     <PDFDownloadLink
-                        document={<TicketPdf nombre={usuario.nombre} apellido={usuario.apellido} />}
+                        document={<TicketPdf nombre={usuario.nombre} apellido={usuario.apellido} id={id} />}
                         fileName="Altar-de-Adoracion.pdf"
                     >
                         <ButtonPrimary className="btn-descarga-ticket">Descarga tu entrada</ButtonPrimary>
