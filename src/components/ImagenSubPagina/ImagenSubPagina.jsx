@@ -1,6 +1,6 @@
 
 import React from 'react'
-import fondo_subpaginas from '../../assets/fondo_subpaginas.jpg';
+import fondo_subpaginas from '../../assets/fondo_subpaginas.jpeg';
 
 import './ImagenSubPagina.css'
 

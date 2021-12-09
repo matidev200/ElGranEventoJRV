@@ -3,7 +3,7 @@
 .ticket-container {
     display: flex;
     justify-content: center;
-    position: relative;
+ 
 }
 
 
@@ -16,10 +16,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-width: 280px;
-    max-width: 420px;
+    min-width: 208px;
+    width: 420px;
     max-height: 1033px;
-    min-height: 1033px;
+    min-height: 1033px; 
+   
 
 }
 

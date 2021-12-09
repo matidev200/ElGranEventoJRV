@@ -14,7 +14,7 @@
     flex-direction: row;
     flex-wrap:wrap;
     box-shadow: 0px -6px 25px 0px #0E0E0E4A;
-    
+    min-width: 292px;
 }
  
 .footer__ul{
