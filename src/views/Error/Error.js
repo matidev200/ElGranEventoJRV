@@ -7,13 +7,6 @@ import {Link} from 'react-router-dom'
 
 const Error = () => {
 
-    
-
-    const handleClick = () => {
-
-    }
-
-
     return (
         
         <>

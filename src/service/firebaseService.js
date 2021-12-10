@@ -44,7 +44,7 @@ const validarCorreo = async(correo) => {
 }
 
 const chooseFunction = async(data) => {
-    if(docs.length < 220){   
+    if(docs.length < 300){   
         const docRef = await addDoc(collection(db, 'usuarios'), {
             nombre: data.nombre,
             apellido: data.apellido,
@@ -77,7 +77,6 @@ export const postData = async(data, setSpinning) => {
         setSpinning(false)
         return id;
 } catch (e) {
-    console.log(e)
     setSpinning(false)
 }        
 }
@@ -92,7 +91,7 @@ export const getNameById = async(id, setUsuario) => {
         apellido: docSnap.data().apellido
     })
     }catch (e){
-        // console.log("dato repetido")
+        return e;
     }
 
    
