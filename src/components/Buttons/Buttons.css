@@ -9,4 +9,5 @@
     background: var(--orange);
     font-family: var(--fuente-base);
     cursor: pointer;
+    font-weight: var(--bold);
 }
